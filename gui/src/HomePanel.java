@@ -65,8 +65,8 @@ public class HomePanel extends ImagePanel {
     }
 
     private void positionLabels () {
-        labels[START].setBounds( 58, 264, labelImages[START].getIconWidth(), labelImages[START].getIconHeight() );
-        labels[LOAD].setBounds( 517, 26, labelImages[LOAD].getIconWidth(), labelImages[LOAD].getIconHeight() );
+        labels[START].setBounds (  58, 264, labelImages[START].getIconWidth(),  labelImages[START].getIconHeight()  );
+        labels[LOAD].setBounds  ( 517,  26, labelImages[LOAD].getIconWidth(),   labelImages[LOAD].getIconHeight()   );
         labels[CONFIG].setBounds( 502, 111, labelImages[CONFIG].getIconWidth(), labelImages[CONFIG].getIconHeight() );
     }
 
