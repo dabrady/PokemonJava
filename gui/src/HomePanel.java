@@ -29,7 +29,7 @@ public class HomePanel extends ImagePanel {
         // Set up general ImagePanel things.
         super( DEFAULT_BG );
         // General settings.
-//        setLayout( null );  // use absolute positioning
+        setLayout( null );  // use absolute positioning
         // Set preferred size to the dimensions of the background image.
         setPreferredSize( new Dimension( getBackgroundImg().getWidth(), getBackgroundImg().getHeight() ) );
         // Set image URLs to defaults.
@@ -50,30 +50,35 @@ public class HomePanel extends ImagePanel {
         labelImageURLs[START]  = "gui/images/pj_startButton.jpg";
         labelImageURLs[LOAD]   = "gui/images/pj_loadButton.jpg";
         labelImageURLs[CONFIG] = "gui/images/pj_configButton.jpg";
+        labelImageURLs[SECRET] = "gui/images/pj_secretButton.gif";
     }
 
     private void loadImages () {
-        labelImages[START]  = new ImageIcon( labelImageURLs[START] );
-        labelImages[LOAD]   = new ImageIcon( labelImageURLs[LOAD] );
+        labelImages[START]  = new ImageIcon( labelImageURLs[START]  );
+        labelImages[LOAD]   = new ImageIcon( labelImageURLs[LOAD]   );
         labelImages[CONFIG] = new ImageIcon( labelImageURLs[CONFIG] );
+        labelImages[SECRET] = new ImageIcon( labelImageURLs[SECRET] );
     }
 
     private void createLabels () {
-        labels[START]  = new JLabel( labelImages[START] );
-        labels[LOAD]   = new JLabel( labelImages[LOAD] );
+        labels[START]  = new JLabel( labelImages[START]  );
+        labels[LOAD]   = new JLabel( labelImages[LOAD]   );
         labels[CONFIG] = new JLabel( labelImages[CONFIG] );
+        labels[SECRET] = new JLabel( labelImages[SECRET] );
     }
 
     private void positionLabels () {
         labels[START].setBounds (  58, 264, labelImages[START].getIconWidth(),  labelImages[START].getIconHeight()  );
         labels[LOAD].setBounds  ( 517,  26, labelImages[LOAD].getIconWidth(),   labelImages[LOAD].getIconHeight()   );
         labels[CONFIG].setBounds( 502, 111, labelImages[CONFIG].getIconWidth(), labelImages[CONFIG].getIconHeight() );
+        labels[SECRET].setBounds( 550, 393, labelImages[SECRET].getIconWidth(), labelImages[SECRET].getIconHeight() );
     }
 
     private void addLabels () {
         add( labels[START] );
         add( labels[LOAD] );
         add( labels[CONFIG] );
+        add( labels[SECRET] );
     }
 
     public void activateListeners () {
