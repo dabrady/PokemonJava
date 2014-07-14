@@ -16,7 +16,6 @@ public class LoadScreen extends PScreen {
 
     //---- Class & Instance variables ----\\
 
-    private static String DEFAULT_BG = "gui/images/pj_loadScreen.jpg";
     private static final String saveFileExtension = "ser"; // The file extension for a serialized Java object.
     private static int BACK = 0, OPEN = 1, START = 2;
 
@@ -25,8 +24,12 @@ public class LoadScreen extends PScreen {
     //---- Constructors ----\\
 
     public LoadScreen () {
-        // Set up general ImagePanel things.
-        super( DEFAULT_BG, 3 );
+        // Set up general PScreen things.
+        this( "gui/images/pj_loadScreen.jpg" );
+    }
+
+    public LoadScreen ( String bgURL ) {
+        super( bgURL, 3 );
         // General settings.
         setLayout( null );  // use absolute positioning
         // Set preferred size to the dimensions of the background image.
@@ -43,7 +46,7 @@ public class LoadScreen extends PScreen {
     @Override
     public void resetImageURLs () {
         labelImageURLs[BACK]  = "gui/images/pj_arrowButton.jpg";
-        labelImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonGreen.jpg";
+        labelImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonRed.jpg";
         labelImageURLs[START] = "gui/images/pj_startButton.jpg";
     }
 

@@ -28,8 +28,10 @@ public class PFrame extends JFrame {
         homeScreen   = new HomeScreen();
         loadScreen   = new LoadScreen();
 //        configScreen = new ConfigScreen();
-        screens[0]   = homeScreen;
-        screens[1]   = loadScreen;
+        screens[HOME]   = homeScreen;
+        screens[LOAD]   = loadScreen;
+        screens[CONFIG] = new PScreen();
+        screens[SECRET] = new PScreen();
     }
 
     //---- Utilities ----\\    
@@ -64,7 +66,7 @@ public class PFrame extends JFrame {
         // General setup.
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         setResizable( false );
-        setContentPane( loadScreen );
+        setContentPane( homeScreen );
         pack();
         setLocationRelativeTo( null );
         setVisible( true );

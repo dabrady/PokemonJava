@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * Created by Daniel Brady as part of the PokemonJava project.
@@ -15,6 +16,7 @@ public class PScreen extends ImagePanel {
 
     //---- Class & Instance variables ----\\
 
+    protected static String DEFAULT_BG = "gui/images/pj_underConstruction.jpg"; // default background is the "under construction" screen
     protected final int NUM_BUTTONS;
     protected JLabel[]    labels;
     protected ImageIcon[] labelImages;
@@ -22,6 +24,10 @@ public class PScreen extends ImagePanel {
     protected MouseAdapter[] labelBehaviors;  // An array of MouseAdapters to be added to the labels, making them clickable.
 
     //---- Constructors ----\\
+
+    public PScreen () {
+        this( DEFAULT_BG, 1 );
+    }
 
     public PScreen ( String bgUrl, int numButtons ) {
         // Set up ImagePanel things.
@@ -47,17 +53,30 @@ public class PScreen extends ImagePanel {
     /**
      * Resets the image URLs back to their defaults.
      */
-    public void resetImageURLs () {}
+    public void resetImageURLs () {
+        labelImageURLs[0]  = "gui/images/pj_arrowButton.jpg";
+    }
 
     /**
      * Resets the label behaviors back to their defaults.
      */
-    public void resetLabelBehaviors () {}
+    public void resetLabelBehaviors () {
+        // Set up behavior for the back button.
+        labelBehaviors[0]  = new MouseAdapter() {
+            @Override
+            public void mouseClicked ( MouseEvent e ) {
+                // Tell the PFrame to switch back to the home screen.
+                PFrame.getInstance().switchScreenTo( PFrame.HOME );
+            }
+        };
+    }
 
     /**
      * Positions the labels on the screen.
      */
-    public void positionLabels () {}
+    public void positionLabels () {
+        labels[0].setBounds( 20, 10, labelImages[0].getIconWidth(), labelImages[0].getIconHeight() );
+    }
 
     /**
      * Completely reactivates the screen: reloads label images, recreates the labels, repositions the labels, adds them
@@ -94,10 +113,13 @@ public class PScreen extends ImagePanel {
      */
     public void activateLabels () {
         for ( int i = 0; i < NUM_BUTTONS ; i++ ) {
-            // Make the labels clickable.
-            labels[i].addMouseListener( labelBehaviors[i] );
-            // Make the cursor the pointy hand one, so they appear clickable.
-            labels[i].setCursor( Cursor.getPredefinedCursor( Cursor.HAND_CURSOR ) );
+            JLabel label = labels[i];
+            if ( label != null ) {
+                // Make the labels clickable.
+                label.addMouseListener( labelBehaviors[i] );
+                // Make the cursor the pointy hand one, so they appear clickable.
+                label.setCursor( Cursor.getPredefinedCursor( Cursor.HAND_CURSOR ) );
+            }
         }
     }
 

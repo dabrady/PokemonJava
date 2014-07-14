@@ -13,14 +13,13 @@ public class HomeScreen extends PScreen {
 
     //---- Class & Instance variables ----\\
 
-    private static String DEFAULT_BG = "gui/images/pj_homeScreen.jpg";
     public static int START = 0, LOAD = 1, CONFIG = 2, SECRET = 3;
 
     //---- Constructors ----\\
 
     public HomeScreen () {
         // Set up a PScreen with the default background and 4 buttons.
-        this( DEFAULT_BG );
+        this( "gui/images/pj_homeScreen.jpg" );
     }
 
     public HomeScreen ( String bgURL ) {
