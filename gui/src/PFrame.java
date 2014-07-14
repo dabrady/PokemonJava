@@ -12,10 +12,12 @@ public class PFrame extends JFrame {
     //---- Class & Instance variables ----\\
 
     private static PFrame SINGLETON;
+    public static final int HOME = 0, LOAD = 1, CONFIG = 2, SECRET = 3;
+
     private HomeScreen homeScreen;
     private LoadScreen loadScreen;
 //    private ConfigScreen configScreen;
-    private PScreen[] screens = new PScreen[2];
+    private PScreen[] screens = new PScreen[4];
 
     //---- Constructors ----\\
 
@@ -57,7 +59,7 @@ public class PFrame extends JFrame {
      */
     public void activate () {
         // (Re)activate screens.
-        for ( PScreen screen : screens ) screen.activate();
+        for ( PScreen screen : screens ) if ( screen != null ) screen.activate();
 
         // General setup.
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
@@ -76,6 +78,18 @@ public class PFrame extends JFrame {
         for ( PScreen screen : screens ) {
             screen.activateLabels();
         }
+    }
+
+    /**
+     * Switches out the content pane for a different screen.
+     * @param screen must be one of PFrame.HOME, PFrame.LOAD, PFrame.CONFIG, or PFrame.SECRET
+     */
+    public void switchScreenTo ( int screen ) {
+        System.out.println( "Switching screens..." );
+        // Switch to the proper screen.
+        setContentPane( screens[screen] );
+        // Refresh the components of the PFrame.
+        validate();
     }
 
     //---- Getters & Setters ----\\

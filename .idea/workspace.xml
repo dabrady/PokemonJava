@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfa4e030-cd42-4aa7-8c44-53f76185c597" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/src/LoadScreen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/src/PScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/images/riffs/PREVIEW.PIX" afterPath="$PROJECT_DIR$/gui/images/riffs/PREVIEW.PIX" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/images/pj_arrowButton.jpg" afterPath="$PROJECT_DIR$/gui/images/pj_arrowButton.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/images/riffs/pj_loadScreen.RIF" afterPath="$PROJECT_DIR$/gui/images/riffs/pj_loadScreen.RIF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/images/riffs/pj_loadScreen_bak.RIF" afterPath="$PROJECT_DIR$/gui/images/riffs/pj_loadScreen_bak.RIF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/images/riffs/pj_underConstruction.RIF" afterPath="$PROJECT_DIR$/gui/images/riffs/pj_underConstruction.RIF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/images/pj_underConstruction.jpg" afterPath="$PROJECT_DIR$/gui/images/pj_underConstruction.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/images/riffs/pj_underConstruction_bak.RIF" afterPath="$PROJECT_DIR$/gui/images/riffs/pj_underConstruction_bak.RIF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/ImagePanel.java" afterPath="$PROJECT_DIR$/gui/src/ImagePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/HomeScreen.java" afterPath="$PROJECT_DIR$/gui/src/HomeScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/LoadScreen.java" afterPath="$PROJECT_DIR$/gui/src/LoadScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/PFrame.java" afterPath="$PROJECT_DIR$/gui/src/PFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\non-modeling\programming\PokemonJava\gui\src\HomePanel.java" afterPath="$PROJECT_DIR$/gui/src/HomeScreen.java" />
     </list>
     <ignored path="PokemonJava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PFrame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PFrame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui/src/PFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
-              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.19950125" vertical-offset="1060" max-vertical-offset="2080">
+              <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -50,29 +41,38 @@
       <file leaf-file-name="HomeScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/src/HomeScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-150.0" vertical-offset="280" max-vertical-offset="1080">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state vertical-scroll-proportion="-320.0" vertical-offset="760" max-vertical-offset="1860">
+              <caret line="70" column="69" selection-start-line="70" selection-start-column="69" selection-end-line="70" selection-end-column="69" />
               <folding>
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#791#792#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#829#830#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#1353#1573#0" expanded="true" />
+                <element signature="e#1562#1563#0" expanded="true" />
+                <element signature="e#1656#1911#0" expanded="true" />
+                <element signature="e#1900#1901#0" expanded="true" />
+                <element signature="e#1996#2255#0" expanded="true" />
+                <element signature="e#2244#2245#0" expanded="true" />
+                <element signature="e#2340#2599#0" expanded="true" />
+                <element signature="e#2588#2589#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadScreen.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoadScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/src/LoadScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45137158" vertical-offset="758" max-vertical-offset="2020">
-              <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="978" max-vertical-offset="2040">
+              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1906#2098#0" expanded="true" />
-                <element signature="e#2087#2088#0" expanded="true" />
-                <element signature="e#2189#2755#0" expanded="true" />
-                <element signature="e#2744#2745#0" expanded="true" />
-                <element signature="e#2842#3005#0" expanded="true" />
-                <element signature="e#2994#2995#0" expanded="true" />
+                <element signature="e#1852#2112#0" expanded="true" />
+                <element signature="e#2101#2102#0" expanded="true" />
+                <element signature="e#2203#2769#0" expanded="true" />
+                <element signature="e#2758#2759#0" expanded="true" />
+                <element signature="e#2856#3080#0" expanded="true" />
+                <element signature="e#3069#3070#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,10 +116,10 @@
         <option value="$PROJECT_DIR$/gui/src/LoadPanel.java" />
         <option value="$PROJECT_DIR$/gui/src/HomePanel.java" />
         <option value="$PROJECT_DIR$/gui/src/ScreenBehavior.java" />
-        <option value="$PROJECT_DIR$/gui/src/PFrame.java" />
         <option value="$PROJECT_DIR$/gui/src/PScreen.java" />
-        <option value="$PROJECT_DIR$/gui/src/HomeScreen.java" />
         <option value="$PROJECT_DIR$/gui/src/LoadScreen.java" />
+        <option value="$PROJECT_DIR$/gui/src/HomeScreen.java" />
+        <option value="$PROJECT_DIR$/gui/src/PFrame.java" />
       </list>
     </option>
   </component>
@@ -436,7 +436,11 @@
       <created>1405299534480</created>
       <updated>1405299534480</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-- updated the pitchurs&#10;-- reorganized class hierarchy&#10;-- made serious progress on the different screens">
+      <created>1405309575290</created>
+      <updated>1405309575290</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -488,7 +492,8 @@
     <MESSAGE value="did this one work?" />
     <MESSAGE value="finalized home screen with buttons" />
     <MESSAGE value="made a bunch of pitchurs" />
-    <option name="LAST_COMMIT_MESSAGE" value="made a bunch of pitchurs" />
+    <MESSAGE value="-- updated the pitchurs&#10;-- reorganized class hierarchy&#10;-- made serious progress on the different screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- updated the pitchurs&#10;-- reorganized class hierarchy&#10;-- made serious progress on the different screens" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -542,38 +547,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/src/PFrame.java">
+    <entry file="file://$PROJECT_DIR$/gui/src/LoadScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1800">
-          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="978" max-vertical-offset="2040">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1852#2112#0" expanded="true" />
+            <element signature="e#2101#2102#0" expanded="true" />
+            <element signature="e#2203#2769#0" expanded="true" />
+            <element signature="e#2758#2759#0" expanded="true" />
+            <element signature="e#2856#3080#0" expanded="true" />
+            <element signature="e#3069#3070#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/src/HomeScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-150.0" vertical-offset="280" max-vertical-offset="1080">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state vertical-scroll-proportion="-320.0" vertical-offset="760" max-vertical-offset="1860">
+          <caret line="70" column="69" selection-start-line="70" selection-start-column="69" selection-end-line="70" selection-end-column="69" />
           <folding>
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#1353#1573#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1656#1911#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+            <element signature="e#1996#2255#0" expanded="true" />
+            <element signature="e#2244#2245#0" expanded="true" />
+            <element signature="e#2340#2599#0" expanded="true" />
+            <element signature="e#2588#2589#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/src/LoadScreen.java">
+    <entry file="file://$PROJECT_DIR$/gui/src/PFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45137158" vertical-offset="758" max-vertical-offset="2020">
-          <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1906#2098#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2189#2755#0" expanded="true" />
-            <element signature="e#2744#2745#0" expanded="true" />
-            <element signature="e#2842#3005#0" expanded="true" />
-            <element signature="e#2994#2995#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.19950125" vertical-offset="1060" max-vertical-offset="2080">
+          <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>

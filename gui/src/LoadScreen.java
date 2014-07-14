@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -36,7 +35,7 @@ public class LoadScreen extends PScreen {
         resetImageURLs();
 
         // Set up the file chooser.
-        chooser.setFileFilter( new FileNameExtensionFilter( "PJ Save File", saveFileExtension ) );
+        //chooser.setFileFilter( new FileNameExtensionFilter( "PJ Save File", saveFileExtension ) );
     }
 
     //---- Utilities ----\\
@@ -55,6 +54,7 @@ public class LoadScreen extends PScreen {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch back to the home screen.
+                PFrame.getInstance().switchScreenTo( PFrame.HOME );
             }
         };
         // Set up the behavior for the file-open button.
@@ -77,7 +77,8 @@ public class LoadScreen extends PScreen {
         labelBehaviors[START] = new MouseAdapter() {
             @Override
             public void mouseClicked ( MouseEvent e ) {
-                super.mouseClicked( e );
+                // Start the saved game.
+                System.out.println( "Let the game begin!" );
             }
         };
     }

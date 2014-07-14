@@ -1,3 +1,6 @@
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 /**
  * Created by Daniel Brady as part of the PokemonJava project.
  * Last modified on 12 July 2014 at 9:48 PM.
@@ -32,6 +35,42 @@ public class HomeScreen extends PScreen {
         labelImageURLs[LOAD]   = "gui/images/pj_loadButton.jpg";
         labelImageURLs[CONFIG] = "gui/images/pj_configButton.jpg";
         labelImageURLs[SECRET] = "gui/images/pj_secretButton.gif";
+    }
+
+    @Override
+    public void resetLabelBehaviors () {
+        // Set up behavior for the start button.
+        labelBehaviors[START]  = new MouseAdapter() {
+            @Override
+            public void mouseClicked ( MouseEvent e ) {
+                // Start a new game.
+                System.out.println( "Let the game begin!" );
+            }
+        };
+        // Set up behavior for the load button.
+        labelBehaviors[LOAD]   = new MouseAdapter() {
+            @Override
+            public void mouseClicked ( MouseEvent e ) {
+                // Tell the PFrame to switch to the load screen.
+                PFrame.getInstance().switchScreenTo( PFrame.LOAD );
+            }
+        };
+        // Set up behavior for the config button.
+        labelBehaviors[CONFIG] = new MouseAdapter() {
+            @Override
+            public void mouseClicked ( MouseEvent e ) {
+                // Tell the PFrame to switch to the config screen.
+                PFrame.getInstance().switchScreenTo( PFrame.CONFIG );
+            }
+        };
+        // Set up behavior for the secret button.
+        labelBehaviors[SECRET] = new MouseAdapter() {
+            @Override
+            public void mouseClicked ( MouseEvent e ) {
+                // Tell the PFrame to switch to the secret screen.
+                PFrame.getInstance().switchScreenTo( PFrame.SECRET );
+            }
+        };
     }
 
     @Override
