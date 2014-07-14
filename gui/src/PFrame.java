@@ -78,7 +78,7 @@ public class PFrame extends JFrame {
     public void reactivateListeners () {
         // Reactivate screen listeners.
         for ( PScreen screen : screens ) {
-            screen.activateLabels();
+            screen.reactivateLabels();
         }
     }
 

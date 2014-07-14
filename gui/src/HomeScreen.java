@@ -30,6 +30,8 @@ public class HomeScreen extends PScreen {
 
     @Override
     public void resetImageURLs () {
+        // Standard images.
+        labelImageURLs         = new String[NUM_BUTTONS]; // reset the URLs array
         labelImageURLs[START]  = "gui/images/pj_startButtonRedGreen.jpg";
         labelImageURLs[LOAD]   = "gui/images/pj_loadButton.jpg";
         labelImageURLs[CONFIG] = "gui/images/pj_configButton.jpg";
@@ -37,17 +39,47 @@ public class HomeScreen extends PScreen {
     }
 
     @Override
+    public void resetHoverImageURLs () {
+        // On-hover images.
+        labelHoverImageURLs          = new String[4]; // reset the URLs array
+        labelHoverImageURLs[START]   = "gui/images/pj_startButtonBlackGreen.jpg";
+        labelHoverImageURLs[LOAD]    = "";
+        labelHoverImageURLs[CONFIG]  = "";
+        labelHoverImageURLs[SECRET]  = "";
+    }
+
+    @Override
+    public void reloadImages () {
+        // Load standard images.
+        super.reloadImages();
+
+    }
+
+    @Override
     public void resetLabelBehaviors () {
+        labelBehaviors        = new MouseAdapter[NUM_BUTTONS]; // reset the behavior array
         // Set up behavior for the start button.
-        labelBehaviors[START]  = new MouseAdapter() {
+        labelBehaviors[START] = new MouseAdapter() {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Start a new game.
                 System.out.println( "Let the game begin!" );
             }
+            //---- Hover image capability ----\\
+            @Override
+            public void mouseEntered ( MouseEvent e ) {
+                // Switch out the button image.
+                labels[START].setIcon( labelHoverImages[START] );
+            }
+
+            @Override
+            public void mouseExited ( MouseEvent e ) {
+                // Switch out the button image.
+                labels[START].setIcon( labelImages[START] );
+            }
         };
         // Set up behavior for the load button.
-        labelBehaviors[LOAD]   = new MouseAdapter() {
+        labelBehaviors[LOAD] = new MouseAdapter() {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch to the load screen.
@@ -73,7 +105,7 @@ public class HomeScreen extends PScreen {
     }
 
     @Override
-    public void positionLabels () {
+    public void repositionLabels () {
         labels[START].setBounds (  68, 275, labelImages[START].getIconWidth(),  labelImages[START].getIconHeight()  );
         labels[LOAD].setBounds  ( 517,  26, labelImages[LOAD].getIconWidth(),   labelImages[LOAD].getIconHeight()   );
         labels[CONFIG].setBounds( 502, 111, labelImages[CONFIG].getIconWidth(), labelImages[CONFIG].getIconHeight() );

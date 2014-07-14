@@ -45,15 +45,28 @@ public class LoadScreen extends PScreen {
 
     @Override
     public void resetImageURLs () {
+        // Standard images.
+        labelImageURLs        = new String[NUM_BUTTONS];
         labelImageURLs[BACK]  = "gui/images/pj_arrowButton.jpg";
         labelImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonRedWhite.jpg";
         labelImageURLs[START] = "gui/images/pj_startButtonRedTan.jpg";
     }
 
     @Override
+    public void resetHoverImageURLs () {
+        // On-hover images.
+        labelHoverImageURLs        = new String[NUM_BUTTONS];
+        labelHoverImageURLs[BACK]  = "";
+        labelHoverImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonBW.jpg";
+        labelHoverImageURLs[START] = "";
+    }
+
+    @Override
     public void resetLabelBehaviors () {
+        // Reset the behavior array.
+        labelBehaviors       = new MouseAdapter[NUM_BUTTONS];
         // Set up behavior for the back button.
-        labelBehaviors[BACK]  = new MouseAdapter() {
+        labelBehaviors[BACK] = new MouseAdapter() {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch back to the home screen.
@@ -61,7 +74,7 @@ public class LoadScreen extends PScreen {
             }
         };
         // Set up the behavior for the file-open button.
-        labelBehaviors[OPEN]  = new MouseAdapter() {
+        labelBehaviors[OPEN] = new MouseAdapter() {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Open the file chooser dialog.
@@ -75,6 +88,16 @@ public class LoadScreen extends PScreen {
                     System.out.println( save.getName() );
                 }
             }
+            //---- Hover image capability ----\\
+            @Override
+            public void mouseEntered ( MouseEvent e ) {
+                labels[OPEN].setIcon( labelHoverImages[OPEN] );
+            }
+
+            @Override
+            public void mouseExited ( MouseEvent e ) {
+                labels[OPEN].setIcon( labelImages[OPEN] );
+            }
         };
         // Set up the behavior for the start button.
         labelBehaviors[START] = new MouseAdapter() {
@@ -87,7 +110,7 @@ public class LoadScreen extends PScreen {
     }
 
     @Override
-    public void positionLabels () {
+    public void repositionLabels () {
         labels[BACK].setBounds (  20,  10, labelImages[BACK].getIconWidth(),  labelImages[BACK].getIconHeight() );
         labels[OPEN].setBounds ( 433, 122, labelImages[OPEN].getIconWidth(),  labelImages[OPEN].getIconHeight()  );
         labels[START].setBounds( 274, 288, labelImages[START].getIconWidth(), labelImages[START].getIconHeight() );

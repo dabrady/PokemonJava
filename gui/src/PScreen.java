@@ -8,8 +8,13 @@ import java.awt.event.MouseEvent;
  * Last modified on 13 July 2014 at 10:06 PM.
  *
  * This class models a screen in Pokemon Java. Screens have a background image and clickable JLabels with custom art,
- * serving as buttons. Subclasses should usually only ever override the #resetImageURLs, #resetLabelBehaviors, and
- * #positionLabels methods.
+ * serving as buttons. Subclasses should usually only ever override the following methods:
+ *     #resetImageURLs
+ *     #resetHoverImageURLs
+ *     #resetLabelBehaviors
+ *     #repositionLabels
+ * A generic PScreen displays an 'under construction' screen, with a 'back' button that signals the assumed PFrame parent
+ * to switch back to the home screen.
  */
 
 public class PScreen extends ImagePanel {
@@ -17,11 +22,15 @@ public class PScreen extends ImagePanel {
     //---- Class & Instance variables ----\\
 
     protected static String DEFAULT_BG = "gui/images/pj_underConstruction.jpg"; // default background is the "under construction" screen
-    protected final int NUM_BUTTONS;
+
+    protected final int   NUM_BUTTONS;
     protected JLabel[]    labels;
     protected ImageIcon[] labelImages;
     protected String[]    labelImageURLs;
-    protected MouseAdapter[] labelBehaviors;  // An array of MouseAdapters to be added to the labels, making them clickable.
+    protected String[]    labelHoverImageURLs;
+    protected ImageIcon[] labelHoverImages;
+
+    protected MouseAdapter[] labelBehaviors;  // An array of  MouseAdapters to be added to the labels, making them clickable.
 
     //---- Constructors ----\\
 
@@ -34,12 +43,13 @@ public class PScreen extends ImagePanel {
         super( bgUrl );
 
         // Set up PScreen things.
-        NUM_BUTTONS    = numButtons;
-        labels         = new JLabel[NUM_BUTTONS];
-        labelImages    = new ImageIcon[NUM_BUTTONS];
-        labelImageURLs = new String[NUM_BUTTONS];
-        labelBehaviors = new MouseAdapter[NUM_BUTTONS];
+        NUM_BUTTONS      = numButtons;
+        labels           = new JLabel[NUM_BUTTONS];
+        labelImages      = new ImageIcon[NUM_BUTTONS];
+        labelHoverImages = new ImageIcon[NUM_BUTTONS];
+
         resetImageURLs(); // Set image URLs to defaults.
+        resetHoverImageURLs(); // Set hover image URLs to defaults.
         resetLabelBehaviors(); // Set label behaviors to defaults.
 
         // General settings.
@@ -54,19 +64,29 @@ public class PScreen extends ImagePanel {
      * Resets the image URLs back to their defaults.
      */
     public void resetImageURLs () {
+        labelImageURLs     = new String[NUM_BUTTONS];
         labelImageURLs[0]  = "gui/images/pj_arrowButton.jpg";
+    }
+
+    /**
+     * Resets the hover image URLs back to their defaults.
+     */
+    public void resetHoverImageURLs () {
+        labelHoverImageURLs    = new String[NUM_BUTTONS];
+        labelHoverImageURLs[0] = "";
     }
 
     /**
      * Resets the label behaviors back to their defaults.
      */
     public void resetLabelBehaviors () {
+        labelBehaviors    = new MouseAdapter[NUM_BUTTONS];
         // Set up behavior for the back button.
-        labelBehaviors[0]  = new MouseAdapter() {
+        labelBehaviors[0] = new MouseAdapter() {
             @Override
-            public void mouseClicked ( MouseEvent e ) {
+            public void mouseClicked(MouseEvent e) {
                 // Tell the PFrame to switch back to the home screen.
-                PFrame.getInstance().switchScreenTo( PFrame.HOME );
+                PFrame.getInstance().switchScreenTo(PFrame.HOME);
             }
         };
     }
@@ -74,8 +94,8 @@ public class PScreen extends ImagePanel {
     /**
      * Positions the labels on the screen.
      */
-    public void positionLabels () {
-        labels[0].setBounds( 20, 10, labelImages[0].getIconWidth(), labelImages[0].getIconHeight() );
+    public void repositionLabels () {
+        labels[0].setBounds(19, 11, labelImages[0].getIconWidth(), labelImages[0].getIconHeight());
     }
 
     /**
@@ -83,26 +103,29 @@ public class PScreen extends ImagePanel {
      * to the screen, and reactivates their behaviors.
      */
     public void activate () {
-        loadImages();
-        createLabels();
-        positionLabels();
+        reloadImages();
+        recreateLabels();
+        repositionLabels();
         addLabels();
-        activateLabels();
+        reactivateLabels();
     }
 
     /**
      * Loads the images given by the label image URLs.
      */
-    public void loadImages () {
+    public void reloadImages () {
         for ( int i = 0; i < NUM_BUTTONS; i++ ) {
-            labelImages[i] = new ImageIcon( labelImageURLs[i] );
+            // Load standard images.
+            labelImages[i]      = new ImageIcon( labelImageURLs[i] );
+            // Load hover images.
+            labelHoverImages[i] = new ImageIcon( labelHoverImageURLs[i] );
         }
     }
 
     /**
      * Creates the labels from the label images.
      */
-    public void createLabels () {
+    public void recreateLabels () {
         for ( int i = 0; i < NUM_BUTTONS; i++ ) {
             labels[i] = new JLabel( labelImages[i] );
         }
@@ -111,12 +134,16 @@ public class PScreen extends ImagePanel {
     /**
      * Add behaviors (MouseAdapters) to the labels, making them clickable.
      */
-    public void activateLabels () {
+    public void reactivateLabels () {
         for ( int i = 0; i < NUM_BUTTONS ; i++ ) {
             JLabel label = labels[i];
             if ( label != null ) {
-                // Make the labels clickable.
-                label.addMouseListener( labelBehaviors[i] );
+                // Add associated behavior to the label.
+                MouseAdapter behavior = labelBehaviors[i];
+                // We can't know which type of listener the behavior is, so just treat for everything.
+                label.addMouseListener      ( behavior );
+                label.addMouseMotionListener( behavior );
+                label.addMouseWheelListener ( behavior );
                 // Make the cursor the pointy hand one, so they appear clickable.
                 label.setCursor( Cursor.getPredefinedCursor( Cursor.HAND_CURSOR ) );
             }
