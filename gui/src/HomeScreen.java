@@ -30,7 +30,7 @@ public class HomeScreen extends PScreen {
 
     @Override
     public void resetImageURLs () {
-        labelImageURLs[START]  = "gui/images/pj_startButton.jpg";
+        labelImageURLs[START]  = "gui/images/pj_startButtonRedGreen.jpg";
         labelImageURLs[LOAD]   = "gui/images/pj_loadButton.jpg";
         labelImageURLs[CONFIG] = "gui/images/pj_configButton.jpg";
         labelImageURLs[SECRET] = "gui/images/pj_secretButton.gif";
@@ -74,7 +74,7 @@ public class HomeScreen extends PScreen {
 
     @Override
     public void positionLabels () {
-        labels[START].setBounds (  58, 264, labelImages[START].getIconWidth(),  labelImages[START].getIconHeight()  );
+        labels[START].setBounds (  68, 275, labelImages[START].getIconWidth(),  labelImages[START].getIconHeight()  );
         labels[LOAD].setBounds  ( 517,  26, labelImages[LOAD].getIconWidth(),   labelImages[LOAD].getIconHeight()   );
         labels[CONFIG].setBounds( 502, 111, labelImages[CONFIG].getIconWidth(), labelImages[CONFIG].getIconHeight() );
         labels[SECRET].setBounds( 550, 393, labelImages[SECRET].getIconWidth(), labelImages[SECRET].getIconHeight() );

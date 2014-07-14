@@ -46,8 +46,8 @@ public class LoadScreen extends PScreen {
     @Override
     public void resetImageURLs () {
         labelImageURLs[BACK]  = "gui/images/pj_arrowButton.jpg";
-        labelImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonRed.jpg";
-        labelImageURLs[START] = "gui/images/pj_startButton.jpg";
+        labelImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonRedWhite.jpg";
+        labelImageURLs[START] = "gui/images/pj_startButtonRedTan.jpg";
     }
 
     @Override
