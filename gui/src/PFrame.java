@@ -12,7 +12,10 @@ public class PFrame extends JFrame {
     //---- Class & Instance variables ----\\
 
     private static PFrame SINGLETON;
-    private HomePanel home;
+    private HomeScreen homeScreen;
+    private LoadScreen loadScreen;
+//    private ConfigScreen configScreen;
+    private PScreen[] screens = new PScreen[2];
 
     //---- Constructors ----\\
 
@@ -20,7 +23,11 @@ public class PFrame extends JFrame {
         super( title );
 
         // Initialize screens.
-        home = new HomePanel();
+        homeScreen   = new HomeScreen();
+        loadScreen   = new LoadScreen();
+//        configScreen = new ConfigScreen();
+        screens[0]   = homeScreen;
+        screens[1]   = loadScreen;
     }
 
     //---- Utilities ----\\    
@@ -49,17 +56,26 @@ public class PFrame extends JFrame {
      * (Re)sets up event listeners and (re)configures the frame.
      */
     public void activate () {
-        // Reactivate home screen.
-        home.activate();
-
+        // (Re)activate screens.
+        for ( PScreen screen : screens ) screen.activate();
 
         // General setup.
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         setResizable( false );
-        setContentPane( home );
+        setContentPane( loadScreen );
         pack();
         setLocationRelativeTo( null );
         setVisible( true );
+    }
+
+    /**
+     * Reactivates all listeners in the PFrame.
+     */
+    public void reactivateListeners () {
+        // Reactivate screen listeners.
+        for ( PScreen screen : screens ) {
+            screen.activateLabels();
+        }
     }
 
     //---- Getters & Setters ----\\

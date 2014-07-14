@@ -72,4 +72,8 @@ public class ImagePanel extends JPanel {
         this.backgroundImg = backgroundImg;
     }
 
+    public JLabel[] getLabels () {
+        return null;
+    }
+
 }
