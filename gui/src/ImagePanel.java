@@ -79,9 +79,4 @@ public class ImagePanel extends JPanel {
     public void setBackgroundImg ( BufferedImage backgroundImg ) {
         this.backgroundImg = backgroundImg;
     }
-
-    public JLabel[] getLabels () {
-        return null;
-    }
-
 }

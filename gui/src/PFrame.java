@@ -87,7 +87,6 @@ public class PFrame extends JFrame {
      * @param screen must be one of PFrame.HOME, PFrame.LOAD, PFrame.CONFIG, or PFrame.SECRET
      */
     public void switchScreenTo ( int screen ) {
-        System.out.println( "Switching screens..." );
         // Switch to the proper screen.
         setContentPane( screens[screen] );
         // Refresh the components of the PFrame.

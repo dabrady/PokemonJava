@@ -61,6 +61,18 @@ public class PScreen extends ImagePanel {
     //---- Utilities ----\\    
 
     /**
+     * Completely reactivates the screen: reloads label images, recreates the labels, repositions the labels, adds them
+     * to the screen, and reactivates their behaviors.
+     */
+    public void activate () {
+        reloadImages();
+        recreateLabels();
+        repositionLabels();
+        addLabels();
+        reactivateLabels();
+    }
+
+    /**
      * Resets the image URLs back to their defaults.
      */
     public void resetImageURLs () {
@@ -73,7 +85,7 @@ public class PScreen extends ImagePanel {
      */
     public void resetHoverImageURLs () {
         labelHoverImageURLs    = new String[NUM_BUTTONS];
-        labelHoverImageURLs[0] = "";
+        labelHoverImageURLs[0] = "gui/images/pj_arrowButtonBlack.jpg";
     }
 
     /**
@@ -84,9 +96,23 @@ public class PScreen extends ImagePanel {
         // Set up behavior for the back button.
         labelBehaviors[0] = new MouseAdapter() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void mouseClicked (MouseEvent e) {
                 // Tell the PFrame to switch back to the home screen.
-                PFrame.getInstance().switchScreenTo(PFrame.HOME);
+                PFrame.getInstance().switchScreenTo( PFrame.HOME );
+                setAllToStandard();
+            }
+
+            //---- Hover image capabilities ----\\
+            @Override
+            public void mouseEntered ( MouseEvent e ) {
+                // Switch image to hover.
+                setHover( 0 );
+            }
+
+            @Override
+            public void mouseExited ( MouseEvent e ) {
+                // Switch image to standard.
+                setHover( 0, false );
             }
         };
     }
@@ -96,18 +122,6 @@ public class PScreen extends ImagePanel {
      */
     public void repositionLabels () {
         labels[0].setBounds(19, 11, labelImages[0].getIconWidth(), labelImages[0].getIconHeight());
-    }
-
-    /**
-     * Completely reactivates the screen: reloads label images, recreates the labels, repositions the labels, adds them
-     * to the screen, and reactivates their behaviors.
-     */
-    public void activate () {
-        reloadImages();
-        recreateLabels();
-        repositionLabels();
-        addLabels();
-        reactivateLabels();
     }
 
     /**
@@ -160,6 +174,34 @@ public class PScreen extends ImagePanel {
     }
 
     //---- Getters & Setters ----\\
+
+    /**
+     * Changes the label image of the specified label to its hover icon.
+     * @param labelIndex
+     */
+    public void setHover ( int labelIndex ) {
+        setHover( labelIndex, true );
+    }
+
+    /**
+     * Changes the label image of the specified label based on @param toHover: if true, changes to its hover icon,
+     * otherwise changes to its standard icon.
+     * @param labelIndex the position of the label in the array returned by #getLabels
+     * @param toHover whether or not to set the hover icon
+     */
+    public void setHover ( int labelIndex, boolean toHover ) {
+        ImageIcon icon = (toHover) ? labelHoverImages[labelIndex] : labelImages[labelIndex];
+        labels[labelIndex].setIcon( icon );
+    }
+
+    /**
+     * Sets all label images to their standard labels, removing any highlighting.
+     */
+    public void setAllToStandard () {
+        for ( int i = 0; i < NUM_BUTTONS; i++ ) {
+            setHover( i, false );
+        }
+    }
 
     public JLabel[] getLabels () {
         return labels;

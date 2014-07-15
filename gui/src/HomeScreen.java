@@ -43,16 +43,9 @@ public class HomeScreen extends PScreen {
         // On-hover images.
         labelHoverImageURLs          = new String[4]; // reset the URLs array
         labelHoverImageURLs[START]   = "gui/images/pj_startButtonBlackGreen.jpg";
-        labelHoverImageURLs[LOAD]    = "";
-        labelHoverImageURLs[CONFIG]  = "";
-        labelHoverImageURLs[SECRET]  = "";
-    }
-
-    @Override
-    public void reloadImages () {
-        // Load standard images.
-        super.reloadImages();
-
+        labelHoverImageURLs[LOAD]    = "gui/images/pj_loadButtonBlack.jpg";
+        labelHoverImageURLs[CONFIG]  = "gui/images/pj_configButtonBlack.jpg";
+        labelHoverImageURLs[SECRET]  = "gui/images/pj_secretButton.gif"; // don't change on hover
     }
 
     @Override
@@ -64,18 +57,21 @@ public class HomeScreen extends PScreen {
             public void mouseClicked ( MouseEvent e ) {
                 // Start a new game.
                 System.out.println( "Let the game begin!" );
+                // ...
+                setAllToStandard(); // remove any highlighting from screen labels
             }
+
             //---- Hover image capability ----\\
             @Override
             public void mouseEntered ( MouseEvent e ) {
                 // Switch out the button image.
-                labels[START].setIcon( labelHoverImages[START] );
+                setHover( START );
             }
 
             @Override
             public void mouseExited ( MouseEvent e ) {
                 // Switch out the button image.
-                labels[START].setIcon( labelImages[START] );
+                setHover( START, false );
             }
         };
         // Set up behavior for the load button.
@@ -84,6 +80,20 @@ public class HomeScreen extends PScreen {
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch to the load screen.
                 PFrame.getInstance().switchScreenTo( PFrame.LOAD );
+                setAllToStandard(); // remove any highlighting from screen labels
+            }
+
+            //---- Hover image capability ----\\
+            @Override
+            public void mouseEntered ( MouseEvent e ) {
+                // Switch out the button image.
+                setHover( LOAD );
+            }
+
+            @Override
+            public void mouseExited ( MouseEvent e ) {
+                // Switch out the button image.
+                setHover( LOAD, false );
             }
         };
         // Set up behavior for the config button.
@@ -92,6 +102,20 @@ public class HomeScreen extends PScreen {
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch to the config screen.
                 PFrame.getInstance().switchScreenTo( PFrame.CONFIG );
+                setAllToStandard(); // remove any highlighting from screen labels
+            }
+
+            //---- Hover image capability ----\\
+            @Override
+            public void mouseEntered ( MouseEvent e ) {
+                // Switch out the button image.
+                setHover( CONFIG );
+            }
+
+            @Override
+            public void mouseExited ( MouseEvent e ) {
+                // Switch out the button image.
+                setHover( CONFIG, false );
             }
         };
         // Set up behavior for the secret button.
@@ -100,6 +124,20 @@ public class HomeScreen extends PScreen {
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch to the secret screen.
                 PFrame.getInstance().switchScreenTo( PFrame.SECRET );
+                setAllToStandard(); // remove any highlighting from screen labels
+            }
+
+            //---- Hover image capability ----\\
+            @Override
+            public void mouseEntered ( MouseEvent e ) {
+                // Switch out the button image.
+                setHover( SECRET );
+            }
+
+            @Override
+            public void mouseExited ( MouseEvent e ) {
+                // Switch out the button image.
+                setHover( SECRET, false );
             }
         };
     }
