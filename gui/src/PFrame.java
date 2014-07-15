@@ -31,7 +31,7 @@ public class PFrame extends JFrame {
         screens[HOME]   = homeScreen;
         screens[LOAD]   = loadScreen;
         screens[CONFIG] = new PScreen();
-        screens[SECRET] = new PScreen();
+        screens[SECRET] = new PScreen( "gui/images/cuteachu.jpg", 1 );
     }
 
     //---- Utilities ----\\    
