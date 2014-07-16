@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfa4e030-cd42-4aa7-8c44-53f76185c597" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/PREVIEW.PIX" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/cuteachu.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_arrowButton.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_arrowButtonBlack.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_arrowButtonBlack.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_arrowButtonRed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_arrowButton_bak.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_bulbasaurFullColor.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_bulbasaurFullColor.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_bulbasaurLineDrawing.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_bulbasaurLineDrawing.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_configButton.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_configButtonBlack.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_configButtonBlack.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_configButtonRed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonBW.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_ellipsisButtonBlack.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonBlack.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonRed.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_ellipsisButtonRed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonRedWhite.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonRed_bak.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_grass.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_grass.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_grassScreen.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_grassScreen.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_homeScreen.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_homeScreen.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadButton.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadButtonBlack.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_loadButtonBlack.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_loadButtonRed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_loadScreen.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadScreen.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadScreen_bak.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_secretButton.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_startButtonBlack.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonBlackGreen.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonBlackTan.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_startButtonRed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedGreen.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedTan.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedWhite.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedWhite_bak.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_underConstruction.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_underConstruction.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_underConstruction_bak.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/src/PromptOnCloseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/PromptOnCloseListener.java" afterPath="$PROJECT_DIR$/gui/src/PromptOnCloseListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PokemonJava.iws" />
@@ -86,9 +39,13 @@
       <file leaf-file-name="PromptOnCloseListener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui/src/PromptOnCloseListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19379845" vertical-offset="0" max-vertical-offset="1780">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.40557668" vertical-offset="360" max-vertical-offset="1920">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+              <folding>
+                <element signature="e#931#1437#0" expanded="true" />
+                <element signature="e#3355#3356#0" expanded="true" />
+                <element signature="e#3385#3386#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,8 +121,8 @@
         <option value="$PROJECT_DIR$/gui/src/PScreen.java" />
         <option value="$PROJECT_DIR$/gui/src/HomeScreen.java" />
         <option value="$PROJECT_DIR$/gui/src/LoadScreen.java" />
-        <option value="$PROJECT_DIR$/gui/src/PromptOnCloseListener.java" />
         <option value="$PROJECT_DIR$/gui/src/PFrame.java" />
+        <option value="$PROJECT_DIR$/gui/src/PromptOnCloseListener.java" />
       </list>
     </option>
   </component>
@@ -515,15 +472,19 @@
       <created>1405545314086</created>
       <updated>1405545314086</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="pushing image organization changes">
+      <created>1405545415620</created>
+      <updated>1405545415620</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25501433" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -539,7 +500,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38584247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38554215" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -575,7 +536,8 @@
     <MESSAGE value="covered leaps and bounds on Load Screen GUI" />
     <MESSAGE value="implemented secret screen" />
     <MESSAGE value="implemented a prompt-on-close feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented a prompt-on-close feature" />
+    <MESSAGE value="pushing image organization changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushing image organization changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -833,9 +795,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/src/PromptOnCloseListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19379845" vertical-offset="0" max-vertical-offset="1780">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.40557668" vertical-offset="360" max-vertical-offset="1920">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="e#931#1437#0" expanded="true" />
+            <element signature="e#3355#3356#0" expanded="true" />
+            <element signature="e#3385#3386#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

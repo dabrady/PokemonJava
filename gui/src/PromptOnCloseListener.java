@@ -28,8 +28,10 @@ public class PromptOnCloseListener extends WindowAdapter {
         dontAsk.addItemListener( new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
+                // If the selectable item that triggered the event was the checkbox
                 if ( e.getItemSelectable() == PromptOnCloseListener.dontAsk ) {
-                    PFrame.setExitOnClose( true );
+                    // Set the flag variable to the state of the check box: true if checked, false if unchecked.
+                    PFrame.setExitOnClose( PromptOnCloseListener.dontAsk.isSelected() );
                 }
             }
         } );
