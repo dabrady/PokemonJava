@@ -21,7 +21,7 @@ public class PScreen extends ImagePanel {
 
     //---- Class & Instance variables ----\\
 
-    protected static String DEFAULT_BG = "gui/images/pj_underConstruction.jpg"; // default background is the "under construction" screen
+    protected static String DEFAULT_BG = PFrame.getJpegPath() + "pj_underConstruction.jpg"; // default background is the "under construction" screen
 
     protected final int   NUM_BUTTONS;
     protected JLabel[]    labels;
@@ -77,7 +77,7 @@ public class PScreen extends ImagePanel {
      */
     public void resetImageURLs () {
         labelImageURLs     = new String[NUM_BUTTONS];
-        labelImageURLs[0]  = "gui/images/pj_arrowButton.jpg";
+        labelImageURLs[0]  = PFrame.getGifPath() + "pj_arrowButtonRed.gif";
     }
 
     /**
@@ -85,7 +85,7 @@ public class PScreen extends ImagePanel {
      */
     public void resetHoverImageURLs () {
         labelHoverImageURLs    = new String[NUM_BUTTONS];
-        labelHoverImageURLs[0] = "gui/images/pj_arrowButtonBlack.jpg";
+        labelHoverImageURLs[0] = PFrame.getGifPath() + "pj_arrowButtonBlack.gif";
     }
 
     /**
@@ -98,7 +98,7 @@ public class PScreen extends ImagePanel {
             @Override
             public void mouseClicked (MouseEvent e) {
                 // Tell the PFrame to switch back to the home screen.
-                PFrame.getInstance().switchScreenTo( PFrame.HOME );
+                PFrame.getInstance().switchScreenTo( PFrame.getHome() );
                 setAllToStandard();
             }
 
@@ -177,7 +177,7 @@ public class PScreen extends ImagePanel {
 
     /**
      * Changes the label image of the specified label to its hover icon.
-     * @param labelIndex
+     * @param labelIndex the position of the label in the array returned by #getLabels
      */
     public void setHover ( int labelIndex ) {
         setHover( labelIndex, true );

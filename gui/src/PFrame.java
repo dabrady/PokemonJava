@@ -12,29 +12,33 @@ public class PFrame extends JFrame {
     //---- Class & Instance variables ----\\
 
     private static PFrame SINGLETON;
-    public static final int HOME = 0, LOAD = 1, CONFIG = 2, SECRET = 3;
+    private static String GIF_PATH  = "gui/images/gifs/";
+    private static String JPEG_PATH = "gui/images/jpegs/";
+
+    private static boolean exitOnClose = false;
+
+    private static final int HOME = 0, LOAD = 1, CONFIG = 2, SECRET = 3;
 
     private HomeScreen homeScreen;
     private LoadScreen loadScreen;
-//    private ConfigScreen configScreen;
+    //    private ConfigScreen configScreen;
     private PScreen[] screens = new PScreen[4];
-
     //---- Constructors ----\\
 
     private PFrame ( String title ) {
         super( title );
 
         // Initialize screens.
-        homeScreen   = new HomeScreen();
-        loadScreen   = new LoadScreen();
-//        configScreen = new ConfigScreen();
+        homeScreen      = new HomeScreen();
+        loadScreen      = new LoadScreen();
+//        configScreen    = new ConfigScreen();
         screens[HOME]   = homeScreen;
         screens[LOAD]   = loadScreen;
         screens[CONFIG] = new PScreen();
-        screens[SECRET] = new PScreen( "gui/images/cuteachu.jpg", 1 );
+        screens[SECRET] = new PScreen( JPEG_PATH + "cuteachu.jpg", 1 );
     }
 
-    //---- Utilities ----\\    
+    //---- Utilities ----\\
 
     /**
      * Provides a way to access the one and only instance of PFrame that can exist.
@@ -64,7 +68,10 @@ public class PFrame extends JFrame {
         for ( PScreen screen : screens ) if ( screen != null ) screen.activate();
 
         // General setup.
-        setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        setDefaultCloseOperation( JFrame.DO_NOTHING_ON_CLOSE );
+        addWindowListener( new PromptOnCloseListener( PromptOnCloseListener.DEFAULT_PROMPT,
+                                                      PromptOnCloseListener.DEFAULT_TITLE,
+                                                      true) );  // Prompts before exiting when user attempts to close window
         setResizable( false );
         setContentPane( homeScreen );
         pack();
@@ -95,5 +102,44 @@ public class PFrame extends JFrame {
 
     //---- Getters & Setters ----\\
 
+    public static String getGifPath () {
+        return GIF_PATH;
+    }
 
+    public static void setGifPath ( String GIF_PATH ) {
+        PFrame.GIF_PATH = GIF_PATH;
+    }
+
+    public static String getJpegPath () {
+        return JPEG_PATH;
+    }
+
+    public static void setJPEG_PATH ( String JPEG_PATH ) {
+        PFrame.JPEG_PATH = JPEG_PATH;
+    }
+
+
+    public static int getHome () {
+        return HOME;
+    }
+
+    public static int getLoad () {
+        return LOAD;
+    }
+
+    public static int getConfig () {
+        return CONFIG;
+    }
+
+    public static int getSecret () {
+        return SECRET;
+    }
+
+    public static boolean isExitOnClose() {
+        return exitOnClose;
+    }
+
+    public static void setExitOnClose( boolean b ) {
+        PFrame.exitOnClose = b;
+    }
 }

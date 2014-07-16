@@ -19,7 +19,7 @@ public class HomeScreen extends PScreen {
 
     public HomeScreen () {
         // Set up a PScreen with the default background and 4 buttons.
-        this( "gui/images/pj_homeScreen.jpg" );
+        this( PFrame.getJpegPath() + "pj_homeScreen.jpg" );
     }
 
     public HomeScreen ( String bgURL ) {
@@ -32,20 +32,20 @@ public class HomeScreen extends PScreen {
     public void resetImageURLs () {
         // Standard images.
         labelImageURLs         = new String[NUM_BUTTONS]; // reset the URLs array
-        labelImageURLs[START]  = "gui/images/pj_startButtonRedGreen.jpg";
-        labelImageURLs[LOAD]   = "gui/images/pj_loadButton.jpg";
-        labelImageURLs[CONFIG] = "gui/images/pj_configButton.jpg";
-        labelImageURLs[SECRET] = "gui/images/pj_secretButton.gif";
+        labelImageURLs[START]  = PFrame.getGifPath() + "pj_startButtonRed.gif";
+        labelImageURLs[LOAD]   = PFrame.getGifPath() + "pj_loadButtonRed.gif";
+        labelImageURLs[CONFIG] = PFrame.getGifPath() + "pj_configButtonRed.gif";
+        labelImageURLs[SECRET] = PFrame.getGifPath() + "pj_secretButton.gif";
     }
 
     @Override
     public void resetHoverImageURLs () {
         // On-hover images.
         labelHoverImageURLs          = new String[4]; // reset the URLs array
-        labelHoverImageURLs[START]   = "gui/images/pj_startButtonBlackGreen.jpg";
-        labelHoverImageURLs[LOAD]    = "gui/images/pj_loadButtonBlack.jpg";
-        labelHoverImageURLs[CONFIG]  = "gui/images/pj_configButtonBlack.jpg";
-        labelHoverImageURLs[SECRET]  = "gui/images/pj_secretButton.gif"; // don't change on hover
+        labelHoverImageURLs[START]   = PFrame.getGifPath() + "pj_startButtonBlack.gif";
+        labelHoverImageURLs[LOAD]    = PFrame.getGifPath() + "pj_loadButtonBlack.gif";
+        labelHoverImageURLs[CONFIG]  = PFrame.getGifPath() + "pj_configButtonBlack.gif";
+        labelHoverImageURLs[SECRET]  = PFrame.getGifPath() + "pj_secretButton.gif"; // don't change on hover
     }
 
     @Override
@@ -79,7 +79,7 @@ public class HomeScreen extends PScreen {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch to the load screen.
-                PFrame.getInstance().switchScreenTo( PFrame.LOAD );
+                PFrame.getInstance().switchScreenTo( PFrame.getLoad() );
                 setAllToStandard(); // remove any highlighting from screen labels
             }
 
@@ -101,7 +101,7 @@ public class HomeScreen extends PScreen {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch to the config screen.
-                PFrame.getInstance().switchScreenTo( PFrame.CONFIG );
+                PFrame.getInstance().switchScreenTo( PFrame.getConfig() );
                 setAllToStandard(); // remove any highlighting from screen labels
             }
 
@@ -123,7 +123,7 @@ public class HomeScreen extends PScreen {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch to the secret screen.
-                PFrame.getInstance().switchScreenTo( PFrame.SECRET );
+                PFrame.getInstance().switchScreenTo( PFrame.getSecret() );
                 setAllToStandard(); // remove any highlighting from screen labels
             }
 

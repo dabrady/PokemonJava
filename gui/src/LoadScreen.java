@@ -28,7 +28,7 @@ public class LoadScreen extends PScreen {
 
     public LoadScreen () {
         // Set up general PScreen things.
-        this( "gui/images/pj_loadScreen.jpg" );
+        this( PFrame.getJpegPath() + "pj_loadScreen.jpg" );
     }
 
     public LoadScreen ( String bgURL ) {
@@ -44,7 +44,7 @@ public class LoadScreen extends PScreen {
         chooser.setFileFilter( new FileNameExtensionFilter( "PJ Save File (.ser)", saveFileExtension ) );
         // Set up the label next to the file chooser.
         chosenOne = new JLabel( "<None selected>" );
-        saveInfo  = new JLabel( generateRandomName() );
+        saveInfo  = new JLabel();
         chosenOne.setFont( new Font( "Monospaced", Font.BOLD, 20 ) );
         saveInfo.setFont ( new Font( "Monospaced", Font.BOLD, 36 ) );
     }
@@ -55,18 +55,18 @@ public class LoadScreen extends PScreen {
     public void resetImageURLs () {
         // Standard images.
         labelImageURLs        = new String[NUM_BUTTONS];
-        labelImageURLs[BACK]  = "gui/images/pj_arrowButton.jpg";
-        labelImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonRedWhite.jpg";
-        labelImageURLs[START] = "gui/images/pj_startButtonRedTan.jpg";
+        labelImageURLs[BACK]  = PFrame.getGifPath() + "pj_arrowButtonRed.gif";
+        labelImageURLs[OPEN]  = PFrame.getGifPath() + "pj_ellipsisButtonRed.gif";
+        labelImageURLs[START] = PFrame.getGifPath() + "pj_startButtonRed.gif";
     }
 
     @Override
     public void resetHoverImageURLs () {
         // On-hover images.
         labelHoverImageURLs        = new String[NUM_BUTTONS];
-        labelHoverImageURLs[BACK]  = "gui/images/pj_arrowButtonBlack.jpg";
-        labelHoverImageURLs[OPEN]  = "gui/images/pj_ellipsisButtonBW.jpg";
-        labelHoverImageURLs[START] = "gui/images/pj_startButtonBlackTan.jpg";
+        labelHoverImageURLs[BACK]  = PFrame.getGifPath() + "pj_arrowButtonBlack.gif";
+        labelHoverImageURLs[OPEN]  = PFrame.getGifPath() + "pj_ellipsisButtonBlack.gif";
+        labelHoverImageURLs[START] = PFrame.getGifPath() + "pj_startButtonBlack.gif";
     }
 
     @Override
@@ -78,7 +78,7 @@ public class LoadScreen extends PScreen {
             @Override
             public void mouseClicked ( MouseEvent e ) {
                 // Tell the PFrame to switch back to the home screen.
-                PFrame.getInstance().switchScreenTo( PFrame.HOME );
+                PFrame.getInstance().switchScreenTo( PFrame.getHome() );
                 setAllToStandard(); // remove any highlighting from screen labels
             }
 
