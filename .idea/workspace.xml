@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfa4e030-cd42-4aa7-8c44-53f76185c597" name="Default" comment="implemented secret screen">
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_arrowButton.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_bulbasaurFullColor.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_bulbasaurLineDrawing.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_configButton.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_ellipsisButtonBW.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_grass.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_grassScreen.JPG" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_homeScreen.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_loadButton.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_loadScreen.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_secretButton.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\non-modeling\programming\PokemonJava\gui\images\pj_underConstruction.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/HomeScreen.java" afterPath="$PROJECT_DIR$/gui/src/HomeScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/LoadScreen.java" afterPath="$PROJECT_DIR$/gui/src/LoadScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/PFrame.java" afterPath="$PROJECT_DIR$/gui/src/PFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/src/PScreen.java" afterPath="$PROJECT_DIR$/gui/src/PScreen.java" />
+    <list default="true" id="dfa4e030-cd42-4aa7-8c44-53f76185c597" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/PREVIEW.PIX" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/cuteachu.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_arrowButton.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_arrowButtonBlack.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_arrowButtonBlack.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_arrowButtonRed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_arrowButton_bak.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_bulbasaurFullColor.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_bulbasaurFullColor.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_bulbasaurLineDrawing.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_bulbasaurLineDrawing.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_configButton.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_configButtonBlack.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_configButtonBlack.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_configButtonRed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonBW.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_ellipsisButtonBlack.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonBlack.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonRed.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_ellipsisButtonRed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonRedWhite.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_ellipsisButtonRed_bak.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_grass.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_grass.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_grassScreen.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_grassScreen.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_homeScreen.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_homeScreen.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadButton.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadButtonBlack.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_loadButtonBlack.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_loadButtonRed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_loadScreen.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadScreen.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_loadScreen_bak.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_secretButton.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_startButtonBlack.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonBlackGreen.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonBlackTan.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_startButtonRed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedGreen.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedTan.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedWhite.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_startButtonRedWhite_bak.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/gifs/pj_underConstruction.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_underConstruction.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/images/jpegs/pj_underConstruction_bak.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/src/PromptOnCloseListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PokemonJava.iws" />
@@ -54,7 +86,7 @@
       <file leaf-file-name="PromptOnCloseListener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui/src/PromptOnCloseListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12658228" vertical-offset="0" max-vertical-offset="1780">
+            <state vertical-scroll-proportion="0.19379845" vertical-offset="0" max-vertical-offset="1780">
               <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
@@ -479,15 +511,19 @@
       <created>1405391297056</created>
       <updated>1405391297056</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="implemented a prompt-on-close feature">
+      <created>1405545314086</created>
+      <updated>1405545314086</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25501433" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -495,7 +531,8 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32048193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -507,7 +544,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32048193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -538,7 +574,8 @@
     <MESSAGE value="new pitchurs, labels on ImagePanels now have hover capabilities" />
     <MESSAGE value="covered leaps and bounds on Load Screen GUI" />
     <MESSAGE value="implemented secret screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented secret screen" />
+    <MESSAGE value="implemented a prompt-on-close feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented a prompt-on-close feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -796,7 +833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/src/PromptOnCloseListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12658228" vertical-offset="0" max-vertical-offset="1780">
+        <state vertical-scroll-proportion="0.19379845" vertical-offset="0" max-vertical-offset="1780">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
