@@ -11,30 +11,24 @@ public class PFrame extends JFrame {
 
     //---- Class & Instance variables ----\\
 
-    private static PFrame SINGLETON;
-    private static String GIF_PATH  = "gui/images/gifs/";
-    private static String JPEG_PATH = "gui/images/jpegs/";
-
+    private static PFrame  SINGLETON;
+    private static String  GIF_PATH    = "gui/images/gifs/";
+    private static String  JPEG_PATH   = "gui/images/jpegs/";
     private static boolean exitOnClose = false;
 
     private static final int HOME = 0, LOAD = 1, CONFIG = 2, SECRET = 3;
 
-    private HomeScreen homeScreen;
-    private LoadScreen loadScreen;
-    //    private ConfigScreen configScreen;
-    private PScreen[] screens = new PScreen[4];
+    private static PScreen[] screens = new PScreen[4];
+
     //---- Constructors ----\\
 
     private PFrame ( String title ) {
         super( title );
 
         // Initialize screens.
-        homeScreen      = new HomeScreen();
-        loadScreen      = new LoadScreen();
-//        configScreen    = new ConfigScreen();
-        screens[HOME]   = homeScreen;
-        screens[LOAD]   = loadScreen;
-        screens[CONFIG] = new PScreen();
+        screens[HOME]   = new HomeScreen();
+        screens[LOAD]   = new LoadScreen();
+        screens[CONFIG] = new PScreen(); // new ConfigScreen();
         screens[SECRET] = new PScreen( JPEG_PATH + "cuteachu.jpg", 1 );
     }
 
@@ -73,7 +67,7 @@ public class PFrame extends JFrame {
                                                       PromptOnCloseListener.DEFAULT_TITLE,
                                                       true) );  // Prompts before exiting when user attempts to close window
         setResizable( false );
-        setContentPane( homeScreen );
+        setContentPane( screens[HOME] );
         pack();
         setLocationRelativeTo( null );
         setVisible( true );
@@ -91,11 +85,22 @@ public class PFrame extends JFrame {
 
     /**
      * Switches out the content pane for a different screen.
-     * @param screen must be one of PFrame.HOME, PFrame.LOAD, PFrame.CONFIG, or PFrame.SECRET
+     * @param screenIndex must be one of PFrame.HOME, PFrame.LOAD, PFrame.CONFIG, or PFrame.SECRET
      */
-    public void switchScreenTo ( int screen ) {
+    public void switchScreenTo ( int screenIndex ) {
         // Switch to the proper screen.
-        setContentPane( screens[screen] );
+        setContentPane( screens[screenIndex] );
+        // Refresh the components of the PFrame.
+        validate();
+    }
+
+    /**
+     * Switches out th content pane for a different screen.
+     * @param screen the screen to display
+     */
+    public void switchScreenTo ( PScreen screen ) {
+        // Switch to the proper screen.
+        setContentPane( screen );
         // Refresh the components of the PFrame.
         validate();
     }
