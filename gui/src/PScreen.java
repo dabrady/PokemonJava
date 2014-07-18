@@ -55,7 +55,7 @@ public class PScreen extends ImagePanel {
         // General settings.
         setLayout( null );  // use absolute positioning
         // Set preferred size to the dimensions of the background image.
-        setPreferredSize( new Dimension( getBackgroundImg().getWidth(), getBackgroundImg().getHeight() ) );
+        setPreferredSize( new Dimension( getImage().getWidth(), getImage().getHeight() ) );
     }
 
     //---- Utilities ----\\    

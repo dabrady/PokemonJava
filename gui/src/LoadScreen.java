@@ -36,7 +36,7 @@ public class LoadScreen extends PScreen {
         // General settings.
         setLayout( null );  // use absolute positioning
         // Set preferred size to the dimensions of the background image.
-        setPreferredSize( new Dimension( getBackgroundImg().getWidth(), getBackgroundImg().getHeight() ) );
+        setPreferredSize( new Dimension( getImage().getWidth(), getImage().getHeight() ) );
         // Set image URLs to defaults.
         resetImageURLs();
 
@@ -168,7 +168,7 @@ public class LoadScreen extends PScreen {
      * of the screen
      */
     private int getSaveInfoX () {
-        int screenWidth = getBackgroundImg().getWidth();
+        int screenWidth = getImage().getWidth();
         // Lots of magic numbers derived by trial and error. No idea how it works, but it works great :)
         int offset = 10;
         double magicNumber = 0.1 * saveInfo.getText().length();

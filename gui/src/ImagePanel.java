@@ -16,67 +16,111 @@ public class ImagePanel extends JPanel {
 
     //---- Class & Instance variables ----\\
 
-    private String backgroundURL;
-    private BufferedImage backgroundImg;
+    protected String        imageURL;
+    protected BufferedImage image;
 
     //---- Constructors ----\\
     public ImagePanel () {
-        this( "" );
+        this( null, null );
     }
 
     public ImagePanel ( String url ) {
-       switchBackgroundTo( url );
+       this( url, null );
     }
 
-    public ImagePanel ( String url, BufferedImage bg ) {
-        setBackgroundURL( url );
-        setBackgroundImg( bg );
+    public ImagePanel ( String url, BufferedImage image ) {
+        // Store the image URL.
+        this.imageURL = url;
+
+        // Read in the image from the URL if necessary.
+        if ( image == null ) {
+            reload();
+        } else {
+            this.image = image;
+        }
     }
 
-    //---- Utilities ----\\    
+    //---- Utilities ----\\
 
+    /**
+     * Handles the drawing of this ImagePanel. Child classes should override this method, and not #paintComponent.
+     * @param g the Graphics object obtained from #paintComponent
+     */
+    protected void draw( Graphics g ) {
+        g.drawImage( image, 0, 0, null );
+    }
+
+    @Override
     public void paintComponent ( Graphics g ) {
         // Fill panel with default background color, in case the background image doesn't match the dimensions of this
         // panel.
         super.paintComponent( g );
         // Draw the background image. If null, nothing is drawn.
-        g.drawImage( backgroundImg, 0, 0, null );
+        draw( g );
     }
 
     /**
-     * Reads the image located at @param url and sets it to be the background of this panel.
-     * @param url the path to the image to use as background
+     * Reload an image into the sprite by reading the given image URL.
+     * @param imageURL the path to the image to load
+     * @return true if the load was successful, false otherwise
      */
-    public void switchBackgroundTo ( String url ) {
-        // Create an image from the URL.
-        if ( !url.equals( "" ) ) {
+    public boolean reload ( String imageURL ) {
+        setImageURL( imageURL );
+        return reload();
+    }
+
+    /**
+     * Reload an image into the sprite by rereading the saved image URL.
+     * @return true if the load was successful, false otherwise
+     */
+    public boolean reload () {
+        if ( !imageURL.equals( "" ) ) {
             try {
-                backgroundURL = url;
-                backgroundImg = ImageIO.read( new File( backgroundURL ) );
+                image = ImageIO.read( new File( imageURL ) );
+                setSize( new Dimension( image.getWidth(), image.getHeight() ) );
+                return true;
             } catch ( IOException e ) {
-                e.printStackTrace();
+                return false;
             }
-        } else {
-            backgroundURL = null;
-            backgroundImg = null;
         }
+        return false;
     }
 
     //---- Getters & Setters ----\\
 
-    public String getBackgroundURL () {
-        return backgroundURL;
+    /**
+     * Get the URL associated with this ImagePanel.
+     * @return a valid URL
+     */
+    public String getImageURL () {
+        return imageURL;
     }
 
-    public void setBackgroundURL ( String backgroundURL ) {
-        this.backgroundURL = backgroundURL;
+    /**
+     * Set the URL to be associated with this ImagePanel's image. Note that it does not enforce a correlation between the
+     * two: it is up to the user to either provide the image associated with this URL or else reload the image using this
+     * URL if they do not want a disconnect to exist between the two attributes.
+     * @param imageURL a valid URL
+     */
+    public void setImageURL ( String imageURL ) {
+        this.imageURL = imageURL;
     }
 
-    public BufferedImage getBackgroundImg () {
-        return backgroundImg;
+    /**
+     * Get the BufferedImage associated with this ImagePanel.
+     * @return the image stored within this ImagePanel
+     */
+    public BufferedImage getImage () {
+        return image;
     }
 
-    public void setBackgroundImg ( BufferedImage backgroundImg ) {
-        this.backgroundImg = backgroundImg;
+    /**
+     * Set the image to be associated with this ImagePanel's image URL. Note that it does not enforce a correlation between
+     * the two: it is up the user to reset the image URL of this ImagePanel if they do not want a disconnect to exist
+     * between the two attributes. Recommend using #reload and providing a valid URL instead of directly calling #setImage.
+     * @param image an image to be associated with this ImagePanel
+     */
+    public void setImage ( BufferedImage image ) {
+        this.image = image;
     }
 }

@@ -123,7 +123,6 @@ public class PFrame extends JFrame {
         PFrame.JPEG_PATH = JPEG_PATH;
     }
 
-
     public static int getHome () {
         return HOME;
     }
